@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather UI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://kit.fontawesome.com/8dad25e52d.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-2">
+            <div class="display-10 font-weight-bold"><i class="fas fa-sun"></i>METEOROLOG</div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-3 w-100">
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light pl-4"><span class="material-icons">dashboard</span> Dashboard</a>
+            </li>
+            <li class="nav-item w-100">
+              <a href="#" class="nav-link text-light pl-4"><span class="material-icons">bar_chart</span> Statistics</a>
+            </li>
+            <li class="nav-item w-100">
+              <a href="#" class="nav-link text-light pl-4"><span class="material-icons">place</span> Map</a>
+            </li>
+            <li class="nav-item w-100">
+              <a href="#" class="nav-link text-light pl-4"><span class="material-icons">calendar_month</span> Calender</a>
+            </li>
+            <li class="nav-item w-100">
+              <a href="#" class="nav-link text-light pl-4"><span class="material-icons">settings</span> Settings</a>
+            </li>
+                  </ul>
+          <div class="card text-center mt-4 pl-10 w-80">
+            <div class="card-body">
+              <div class="row text-left">
+              <div class="col-4 weather-icon" style="float:left;">
+                <i class="fas fa-cloud" ></i>
+              </div> <div class="col timezone">
+                <div class="row">
+                <p style="padding-bottom:0;margin:0;font-size:1.5em;font-weight:600">Today</p>
+                </div>
+                <div class="row">
+                <p style="padding-bottom:0;margin:0;font-weight:600">11:44</p>
+                </div>
+                <div class="row">
+                <p style="padding-bottom:0;margin:0;font-weight:300">Mon 11 January</p>
+                </div>
+              </div></div>
+              <div class="Temperature">
+                <p style="font-size:2em;font-weight:700;margin-top:0.5em;margin-bottom:0.25em;">+4 ℃</p>
+              </div>
+              <div class="location">
+                <p style="padding-bottom:0;margin:0;font-size:1.2em;font-weight:700">New York</p>
+                <p style="padding-bottom:0;margin:0;font-size:0.9em;font-weight:200">United States</p>
+              </div>
+              <div class="humidity">
+                <p style="margin-top:0.75em;margin-bottom:0.5em;">Humidty:   70%</p>
+                  <div class="progress" style="height:2px;color:#7952b3;margin-top:0;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+              </div>
+              <div class="precipitation">
+                <p style="margin-top:0.75em;margin-bottom:0.5em;">Precipitation:    25% </p>
+                <div class="progress" style="height:2px;color:#7952b3;margin-top:0;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="windspeed">
+                <p>Wind: 5.4kmph</p>
+              </div>
+            </div>
+          </div>
+    </nav>
+    <section class="p-4 my-container">
+      <div class="search">
+        <span class="material-icons purple">search</span>
+        <input type="text" name="search" value="" placeholder="Search">
+      </div>
+        <h5>Weather Forecast</h1>
+        <div class="row cities">
+          <div class="col-md-2">
+          <div class="card h-100" style="width: 10rem;">
+  <img src="https://image.shutterstock.com/image-photo/amsterdam-netherlands-dancing-houses-over-600w-656151523.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="#" class="stretched-link text-decoration-none">Amsterdam</a>
+  </div>
+  </div>
+  </div>
+          <div class="col-md-2">
+<div class="card h-100" style="width: 10rem;">
+<img src="https://image.shutterstock.com/image-photo/london-uk-november-03-2012-600w-1005949318.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<a href="#" class="stretched-link text-decoration-none">London</a>
+</div>
+</div>
+</div>
+          <div class="col-md-2">
+<div class="card h-100" style="width: 10rem;">
+<img src="https://image.shutterstock.com/image-photo/hungary-beautiful-snowy-budapest-parliament-600w-1894689982.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<a href="#" class="stretched-link text-decoration-none">Budapest</a>
+</div>
+</div>
+</div>
+          <div class="col-md-2">
+<div class="card h-100" style="width: 10rem;">
+<img src="https://image.shutterstock.com/image-photo/paris-eiffel-tower-river-seine-600w-710380270.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<a href="#" class="stretched-link text-decoration-none">Paris</a>
+</div>
+</div>
+</div>
+          <div class="col-md-2">
+<div class="card h-100" style="width: 10rem;">
+<img src="https://image.shutterstock.com/image-photo/chicago-illinoisusajune-30-2013-panoramic-600w-1075027280.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<a href="#" class="stretched-link text-decoration-none">Chicago</a>
+</div>
+</div>
+</div>
+        </div>
+        <div class="particularcity">
+        <h5>London</h5>
+        <div class="row cityforecast">
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="card h-20 text-center">
+              <div class="card-body">
+                <div class="card-text icon">
+                  <i class="fas fa-cloud-meatball"></i>
+                </div>
+                <div class="card-text temp">
+                  <p>-5/+4</p>
+                </div>
+                <div class="card-text day">
+                  <p>11 Mon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graph">
+      <h5>Weather Graph</h5>
+      <div class="row">
+        <div class="card">
+          <div class="card-body" >
+            <div id="chart_div" style="width:80%;"></div>
+          </div>
+        </div>
+    </div>
+    </div>
+        </section>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript">
+    </script>
+
+</body>
+
+</html>
